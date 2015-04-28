@@ -1,8 +1,6 @@
-# NYTimes Objective-C Style Guide
+# NextFaze Objective-C Style Guide
 
-This style guide outlines the coding conventions of the iOS teams at The New York Times. We welcome your feedback in [issues](https://github.com/NYTimes/objetive-c-style-guide/issues), [pull requests](https://github.com/NYTimes/objetive-c-style-guide/pulls) and [tweets](https://twitter.com/nytimesmobile). Also, [we’re hiring](http://jobs.nytco.com/job/New-York-iOS-Developer-Job-NY-10001/73366300/).
-
-Thanks to all of [our contributors](https://github.com/NYTimes/objective-c-style-guide/contributors).
+This style guide outlines the coding conventions of the iOS teams at NextFaze. It is based on the [NYTimes guide](https://github.com/NYTimes/objetive-c-style-guide).
 
 ## Introduction
 
@@ -12,31 +10,6 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Cocoa Fundamentals Guide](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaFundamentals/Introduction/Introduction.html)
 * [Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 * [iOS App Programming Guide](http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/Introduction/Introduction.html)
-
-## Table of Contents
-
-* [Dot Notation Syntax](#dot-notation-syntax)
-* [Spacing](#spacing)
-* [Conditionals](#conditionals)
-  * [Ternary Operator](#ternary-operator)
-* [Error handling](#error-handling)
-* [Methods](#methods)
-* [Variables](#variables)
-* [Naming](#naming)
-  * [Categories](#categories)
-* [Comments](#comments)
-* [Init & Dealloc](#init-and-dealloc)
-* [Literals](#literals)
-* [CGRect Functions](#cgrect-functions)
-* [Constants](#constants)
-* [Enumerated Types](#enumerated-types)
-* [Bitmasks](#bitmasks)
-* [Private Properties](#private-properties)
-* [Image Naming](#image-naming)
-* [Booleans](#booleans)
-* [Singletons](#singletons)
-* [Imports](#imports)
-* [Xcode Project](#xcode-project)
 
 ## Dot Notation Syntax
 
@@ -57,20 +30,20 @@ UIApplication.sharedApplication.delegate;
 ## Spacing
 
 * Indent using 4 spaces. Never indent with tabs. Be sure to set this preference in Xcode.
-* Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
-
-**For example:**
-```objc
-if (user.isHappy) {
-    // Do something
-}
-else {
-    // Do something else
-}
-```
 * There should be exactly one blank line between methods to aid in visual clarity and organization.
 * Whitespace within methods should be used to separate functionality (though often this can indicate an opportunity to split the method into several, smaller methods). In methods with long or verbose names, a single line of whitespace may be used to provide visual separation before the method’s body.
 * `@synthesize` and `@dynamic` should each be declared on new lines in the implementation.
+
+## Control Structures
+
+```objc
+if (user.isHappy) {
+    // Do something
+    
+} else {
+    // Do something else
+}
+```
 
 ## Conditionals
 
@@ -476,15 +449,3 @@ The physical files should be kept in sync with the Xcode project files in order 
 
 When possible, always turn on “Treat Warnings as Errors” in the target’s Build Settings and enable as many [additional warnings](http://boredzo.org/blog/archives/2009-11-07/warnings) as possible. If you need to ignore a specific warning, use [Clang’s pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas).
 
-# Other Objective-C Style Guides
-
-If ours doesn’t fit your tastes, have a look at some other style guides:
-
-* [Google](http://google-styleguide.googlecode.com/svn/trunk/objcguide.xml)
-* [GitHub](https://github.com/github/objective-c-conventions)
-* [Adium](https://trac.adium.im/wiki/CodingStyle)
-* [Sam Soffes](https://gist.github.com/soffes/812796)
-* [CocoaDevCentral](http://cocoadevcentral.com/articles/000082.php)
-* [Luke Redpath](http://lukeredpath.co.uk/blog/2011/06/28/my-objective-c-style-guide/)
-* [Marcus Zarra](http://www.cimgf.com/zds-code-style-guide/)
-* [Wikimedia](https://www.mediawiki.org/wiki/Wikimedia_Apps/Team/iOS/ObjectiveCStyleGuide)
