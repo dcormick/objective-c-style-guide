@@ -1,6 +1,6 @@
 # NextFaze Objective-C Style Guide
 
-This style guide outlines the coding conventions of the iOS teams at NextFaze. It is based on the [NYTimes guide](https://github.com/NYTimes/objetive-c-style-guide).
+This style guide outlines the coding conventions of the iOS team at NextFaze. It is based on the [NYTimes guide](https://github.com/NYTimes/objetive-c-style-guide).
 
 ## Introduction
 
